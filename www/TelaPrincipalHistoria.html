@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/menu2.css">
+    <link rel="stylesheet" href="css/TelaHistoria.css">
+
+</head>
+<body>
+
+    <!– INICIO DA NAVBAR –>
+   <header>
+        <nav class="nav-bar">
+         <div class="logo">
+           <img class="studylogo" src="imagens/Menu/logobranca.png">
+         </div>
+
+         <div class="pocisaousuario">
+           <img class="usuario" src="imagens/Menu/usuario.png">
+         </div>
+
+         <div class="wrapper">
+            <div class="container">
+                <img class="icon" src="imagens/Menu/menu.png">
+                <div class="menulogo"></div>
+            </div>
+        </div>
+        </nav>
+    </header>
+    <!– FINAL DA NAVBAR –>
+
+    <!– INICIO DA ABA DO MENU –>
+     <ul class="menu">
+             <li><a href="telaprincipal.html">Início</a></li>
+             <li><a href="humor.html">Humor</a></li>
+              <li><a href="calendario.html">Calendário</a></li>
+              <li><a href="chat.html">Chat</a></li>
+              <li><a href="blocoNotas.html">Anotações</a></li>
+              <li><a href="bateria.html">Bateria</a></li>
+              <li><a href="crono.html">Cronômetro</a></li>
+              <li><a href="perfil.html">Meu Perfil</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+    <!– FINAL DA ABA DO MENU –>
+
+    <br><br>
+     <div class="ImagemCorjua">
+        <img src="imagens/TelaPortugues/coruja1.png" height="65px">     
+     </div>
+
+       <div class="ImagemPortugues2">
+                <img src="imagens/TelaHistoria/historia2.png" height="60px">     
+       </div>
+
+     <br>
+      <center>
+                <img src="imagens/TelaHistoria/Historia.png" height="25px">     
+     </center>
+
+     <br><br><br>
+        <center>
+                <img src="imagens/TelaHistoria/historiainicio.png"  height="165px">     
+       </center>
+
+       <br><br><br>
+
+       <div class="botao01">
+        <a href="TelaConteudoHistoria.html"> <button class="Botao">Conteúdos</button> </a>
+        </div>
+
+       <div class="botao02">
+      <a href="TelaOqueHistoria.html">   <button class="Botao">O que é</button> </a>
+      </div>
+
+      <br><br><br><br>
+       <div class="botao03">
+       <a href="TelaImportanciaHistoria.html">  <button class="Botao">Importância</button> </a>
+      </div>
+
+      <br><br><br><br><br>
+
+       <div class="botao04">
+      <a href="telaprincipal.html">  <button class="BotaoVoltar">Voltar</button> </a>
+      </div>
+      
+     <footer class="barra"></footer>
+
+       <!– JS DO MENU –>
+       <script>
+            var logo = document.querySelector('.container');
+            var menu = document.querySelector('.menu');
+            logo.addEventListener('click',function(){
+                menu.classList.toggle('showmenu');
+            });
+           </script>
+    
+</body>
+</html>

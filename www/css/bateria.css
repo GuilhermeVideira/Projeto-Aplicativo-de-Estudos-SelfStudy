@@ -1,0 +1,68 @@
+ *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+          
+    }
+    .container01{
+       position:absolute;
+         margin-left:-100px;
+        top:50%;
+        left:50%;
+    }
+    #battery:before{
+       position:absolute;
+        content:"";
+        height:2em;
+        width:1em;
+        background: #338b85;
+        margin:auto;
+        top:0;
+        margin-top:30px;
+        bottom:0;
+        left:-0.5em;
+        border-radius:0 0.3em 0.3em 0;
+    }
+    #charge-level{
+       margin:30px;
+       margin-top:5px;
+        font-size:2em;
+        font-weight:300;
+       
+    }
+    #charging-time{
+        margin:40px;
+    }
+    .active{
+        animation: charge-animation 3s infinite linear;
+    }
+    @keyframes charge-animation{
+        0%{
+            width:0;
+        }
+        100%{
+            width: 8.3em;
+        }
+    }
+    #charge{
+        position:absolute;
+        height:3.8em;
+        width:8.3em;
+        background-color:#338b85;
+        top:16px;
+        left:18px;
+        
+    }
+    #battery{
+        box-sizing:content-box;
+        height:4.6em;
+        width:10.8em;
+        border:0.6em solid #338b85;
+        margin:auto;
+        border-radius:0.6em;
+        margin-left:10px;
+    }
+    
+
+    
+

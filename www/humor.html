@@ -1,0 +1,395 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Marko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="components/loader.css">
+    <script src="components/loader.js"></script>
+   
+    <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/menu.css">
+    <script>
+        //
+        // TODO: Write JavaScript code here
+        //
+    </script>
+</head>
+<body>
+     
+    <style>
+        /* CSS do menu*/
+  *{
+           margin: 0;
+           padding: 0;
+           box-sizing:border-box;
+           font-family: arial;
+       }
+       .studylogo{
+           width:90px;
+           height:60px;
+       }
+       .wrapper{
+           width:90%;
+           margin:  0 auto;
+           margin-top:-30px;
+       }
+       .barra{
+    background-color:#5dc1b9 ;
+    width: 100%;
+    height: 28px;
+    margin-top: 160px;
+     }
+ 
+    </style>
+  
+    <header>
+        <nav class="nav-bar">
+         <div class="logo">
+           <img class="studylogo" src="img/menu/logobranca.png">
+         </div>
+
+         <div class="wrapper">
+            <div class="container">
+                
+                <img class="icon" src="img/menu/menu.png">
+                <div class="menulogo"></div>
+                 <div class="menulogo"></div>
+                  <div class="menulogo"></div>
+            </div>
+        </div>
+        </nav>
+    </header>
+        
+   
+        <ul class="menu">
+        
+            <li><a href="telaprincipal.html">Início</a></li>
+             <li><a href="humor.html">Humor</a></li>
+              <li><a href="calendario.html">Calendário</a></li>
+              <li><a href="chat.html">Chat</a></li>
+              <li><a href="blocoNotas.html">Anotações</a></li>
+              <li><a href="bateria.html">Bateria</a></li>
+              <li><a href="crono.html">Cronômetro</a></li>
+              <li><a href="perfil.html">Meu Perfil</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+   <br>
+ <center>
+     <br>
+    
+   <center>
+   <center>
+  <div class="title">
+    <h2>Humor<h2>
+      <p class="p1">Como se sente hoje? </p>
+      </div>
+ </center>
+   
+   </div>
+   </center>
+   <br>
+
+
+    <div class="container0">
+        <div class="emoji" onclick="selectEmoji('😊')"> 
+            <img class="emoji1" src="img/humor/sorridente.png" alt="Feliz">
+            <p>Feliz</p>
+        </div>
+        <div class="emoji" onclick="selectEmoji('😢')">
+            <img class="emoji1"src="img/humor/chateado.png" alt="Triste">
+            <p>Triste</p>
+        </div>
+        <div class="emoji" onclick="selectEmoji('😡')"> 
+            <img class="emoji1" src="img/humor/irritado.png" alt="Bravo">
+            <p>Bravo (a)</p>
+        </div>
+         <div class="emoji" onclick="selectEmoji('🙄')"> 
+            <img class="emoji1" src="img/humor/entediado.png" alt="Entediado">
+            <p>Entediado (a)</p>
+        </div>
+         <div class="emoji" onclick="selectEmoji('🤔')"> 
+            <img class="emoji1" src="img/humor/pensativo.png" alt="pensativo">
+            <p>Pensativo (a)</p>
+        </div>
+        <div class="emoji" onclick="selectEmoji('🤐')"> 
+            <img class="emoji1" src="img/humor/silencioso.jpg" alt="Silencioso">
+            <p>Silencioso (a)</p>
+        </div>
+        <div class="emoji" onclick="selectEmoji('🥱')"> 
+            <img class="emoji1" src="img/humor/sonolento.png" alt="sonolento">
+            <p>Sonolento (a)</p>
+        </div>
+        <div class="emoji" onclick="selectEmoji('😰')"> 
+            <img class="emoji1" src="img/humor/suandofrio.png" alt="suandofrio">
+            <p>Suando Frio</p>
+        </div>
+        
+    </div>
+    <br>
+    <button class="botao" onclick="confirmSelection()">Confirmar</button>
+    <button class="botao-limpar" onclick="limparSelecao()">Limpar</button>
+    <br>
+     <footer class="barra0"></footer>
+    <script>
+        function toggleNav() {
+            var navLinks = document.getElementById("navLinks");
+            if (navLinks.style.display === "block") {
+                navLinks.style.display = "none";
+            } else {
+                navLinks.style.display = "block";
+            }
+        }
+
+        function toggleLinks() {
+            var navLinks = document.getElementById("navLinks");
+            if (navLinks.style.display === "none") {
+                navLinks.style.display = "block";
+            } else {
+                navLinks.style.display = "none";
+            }
+        }
+         let selectedEmoji = '';
+
+        function selectEmoji(emoji) {
+            selectedEmoji = emoji;
+        }
+
+        function confirmSelection() {
+            if (selectedEmoji === '') {
+                alert("Por favor, selecione um emoji antes de confirmar.");
+            } else {
+                alert("Seu sentimento selecionado é: " + selectedEmoji);
+            }
+        }
+        function limparSelecao() {
+            selectedEmoji = '';
+            alert("Seleção de emoji limpa. Por favor, selecione um novo emoji.");
+        }
+        </script>
+   <center>
+   
+    <style>
+
+    *{
+        margin:0;
+        padding:0;
+        font-family: 'Inter', sans-serif;
+    }
+    .botao {
+     background-color: #5DC1B9;
+        border: 0;
+        color: white;
+        height: 40px;
+        width: 150px;
+        border-radius: 15px;
+        margin-top: 15px;
+        
+        font-size: 20px;
+}
+.barra0{
+    background-color:#5dc1b9 ;
+    width: 100%;
+    height: 12px;
+    margin-top: 15px;
+     }
+    .title001{
+     color:#5dc1b9;
+        font-size:17px;
+    }
+     .p1{
+        color:#5dc1b9;
+        font-size:17px;
+    }
+    .texto {
+    margin-top: 140px;
+    margin-left: 80px;
+}
+.container0 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        .emoji {
+            text-align: center;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        .emoji img {
+            width: 75px;
+            height: 75px;
+        }
+.titulos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+.title1 {
+   margin-top: 30px;
+   margin-left: 60px;
+    color: #005954;
+    font-family: 'Marko One', serif;
+}
+.title2 {
+   margin-top: 30px;
+   text-align: center;
+    color: #005954;
+    font-family: 'Marko One', serif;
+}
+.imagem3 {
+    height: 300px;
+    position: relative;
+    left: 10%;
+    top: 10px;
+}
+.botoes {
+    position: absolute;
+
+    
+}
+ .input-container {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .input-container input, .input-container select {
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .botao4 {
+      background-color: #5DC1B9;
+      border: 0;
+      color: white;
+      height: 40px;
+      width: 150px;
+      border-radius: 15px;
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+    .botao-limpar {
+      background-color: #f2f2f2;
+      border: 0;
+      color: #333;
+      height: 40px;
+      width: 150px;
+      border-radius: 15px;
+      margin-top: 10px;
+      font-size: 20px;
+      transition: all .4s ease-in-out;
+    }
+    .botao-limpar:hover {
+        background-color: #5DC1B9 ;
+        color: white;
+    }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .historico {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .historico h2 {
+      color: #5DC1B9;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    #historico-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    #historico-list li {
+      margin: 10px 0;
+      background: #f2f2f2;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    .logo{
+        width:100px;
+        height:90px;
+    }
+     .barra1{
+         background-color:#5dc1b9 ;
+    width: 100%;
+    height: 50px;
+    margin-top: -60px; 
+    margin: 0px;
+     }
+     .barra{
+         background-color:#5dc1b9;
+         width:100%;
+         height:40px;
+         margin:0;
+         margin-top: 30px;
+     }
+    
+     .coruja1{
+      width: 160px;
+      height: 160px;
+     }
+     h2{
+         font-family: 'Marko One', serif;
+         font-size:20px;
+         color:#005954;
+     }
+     p{
+          font-family: 'Inter', serif;
+         color:black;
+         font-size:14px;
+
+     }
+     .logo0{
+ width:90px;
+        height:90px;
+        margin-top:-50px;
+     }
+     .botao-limpar {
+
+      background-color: #f2f2f2;
+
+      border: 0;
+
+      color: #333;
+
+      height: 40px;
+
+      width: 150px;
+
+      border-radius: 15px;
+
+      margin-top: 10px;
+
+      font-size: 20px;
+
+      transition: all .4s ease-in-out;
+
+    }
+
+    .botao-limpar:hover {
+
+        background-color: #5DC1B9 ;
+
+        color: white;
+
+    }
+  
+    </style>
+     <script src="js/menuScript.js"></script>
+</body>
+</html>
+

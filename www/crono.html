@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/main1.js"></script>
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/menu.css">
+     <link rel="stylesheet" href="css/crono.css">
+     <link rel="stylesheet" href="css/music.css">
+</head>
+<body>
+     <header>
+        <nav class="nav-bar">
+         <div class="logo">
+           <img class="studylogo" src="img/menu/logobranca.png">
+         </div>
+
+         <div class="wrapper">
+            <div class="container">
+                
+                <img class="icon" src="img/menu/menu.png">
+                <div class="menulogo"></div>
+                 <div class="menulogo"></div>
+                  <div class="menulogo"></div>
+            </div>
+        </div>
+        </nav>
+    </header>
+    
+   
+        <ul class="menu">
+        
+              <li><a href="telaprincipal.html">Início</a></li>
+             <li><a href="humor.html">Humor</a></li>
+              <li><a href="calendario.html">Calendário</a></li>
+              <li><a href="chat.html">Chat</a></li>
+              <li><a href="blocoNotas.html">Anotações</a></li>
+              <li><a href="bateria.html">Bateria</a></li>
+              <li><a href="crono.html">Cronômetro</a></li>
+              <li><a href="perfil.html">Meu Perfil</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+        <!---fim do código do Menu--->
+        <br><br>
+ <center>
+    <div class="div">
+        <h1 class="title">Cronômetro</h1>
+    </div>
+
+    <div class="timer-container">
+        <div class="timer">00:00:00</div>
+    </div>
+
+
+<center>
+   
+   
+ <audio id="music-player" autoplay="autoplay"></audio>
+           
+            <div class="player-controls">
+             <div class="detalhes">
+                <p id="song-title">Calm-background</p>
+                <p id="song-artist"></p>
+             </div>
+<button id="prev-btn"><i class='bx bx-skip-previous bx-md' style='color:#005954'  ></i></button>
+<button id="play-btn"><i id="playicon" class='bx bx-play bx-md' style='color:#005954'  ></i></button>
+<button id="next-btn"><i class='bx bx-skip-next bx-md ' style='color:#005954' ></i></i></button>
+ <div class="song-details">
+    
+   <br>
+              
+
+        
+            </div>
+            <div class="next-up">
+                <p>A seguir: <span id="song-next-up">Lorem ipsum dolor</span></p>
+            </div>
+        </div>
+    </div>
+    
+</center>
+<br><br>
+    <div id="buttons">
+          <button id="start" class="start">Iniciar</button>
+        <button id="pause" class="pause">Pausar</button>
+        <button id="reset" class="reset"> Zerar</button>
+        
+    </div>
+
+
+    <div class="dados">
+        
+        <p id="elapsed-time">Tempo decorrido:  </p>
+        <div id="history"></div>
+    </div>
+ </center>
+    <script>
+       let timerInterval;
+        let seconds = 0;
+
+        const startBtn = document.getElementById("start");
+        const pauseBtn = document.getElementById("pause");
+        const resetBtn = document.getElementById("reset");
+        const historyDiv = document.getElementById("history");
+
+        let history = [];
+
+        function startTimer() {
+            timerInterval = setInterval(function() {
+                seconds++;
+                displayTime();
+            }, 1000);
+        }
+
+        function pauseTimer() {
+            clearInterval(timerInterval);
+        }
+
+        function resetTimer() {
+            clearInterval(timerInterval);
+            const timeElapsed = formatTime();
+            seconds = 0;
+            displayTime();
+            history.push(timeElapsed);
+            displayHistory();
+        }
+
+        function displayTime() {
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
+
+            const formattedTime = `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+            document.querySelector(".timer").textContent = formattedTime;
+        }
+
+        function displayHistory() {
+            historyDiv.innerHTML = "";
+            history.forEach(item => {
+                const p = document.createElement("p");
+                p.textContent = item;
+                historyDiv.appendChild(p);
+            });
+        }
+
+        function formatTime() {
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
+            return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+        }
+
+        startBtn.addEventListener("click", startTimer);
+        pauseBtn.addEventListener("click", pauseTimer);
+        resetBtn.addEventListener("click", resetTimer);
+       
+    </script>
+</body><br><br>
+    <footer class="barra"></footer>
+<script src="js/menuScript.js"></script>
+<script src="js/musica.js"></script>
+</html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Marko+One&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.main{
+     border-radius: 50%;
+    margin-bottom: 20px;
+    cursor: pointer;
+    margin-top: 100px;
+}
+.song-title,.song-artist{
+    display: flex;
+    margin-top: -105px;
+}
+.detalhes{
+    margin-top: -100px;
+}
+#prev-btn{
+border-radius: 50%;
+background-color: white;
+ cursor: pointer;
+ border:none;
+ box-shadow: 0px 3px 10px #464646;
+ margin: 10px;
+
+}
+
+#next-btn{
+border-radius: 50%;
+background-color: white;
+ cursor: pointer;
+ border:none;
+ box-shadow: 0px 3px 10px #464646;
+  margin: 10px;
+}
+#play-btn{
+border-radius: 50%;
+background-color: white;
+ cursor: pointer;
+ border:none;
+ box-shadow: 0px 3px 10px #464646;
+
+}
+
+</style>
+    
+
+   

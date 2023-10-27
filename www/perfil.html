@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+         <div class="logo">
+           <img class="studylogo" src="img/menu/logobranca.png">
+         </div>
+
+         <div class="wrapper">
+            <div class="container">
+                
+                <img class="icon" src="img/menu/menu.png">
+                <div class="menulogo"></div>
+                 <div class="menulogo"></div>
+                  <div class="menulogo"></div>
+            </div>
+        </div>
+        </nav>
+    </header>
+        
+   
+        <ul class="menu">
+        
+            <li><a href="telaprincipal.html">Início</a></li>
+             <li><a href="humor.html">Humor</a></li>
+              <li><a href="calendario.html">Calendário</a></li>
+              <li><a href="chat.html">Chat</a></li>
+              <li><a href="blocoNotas.html">Anotações</a></li>
+              <li><a href="bateria.html">Bateria</a></li>
+              <li><a href="crono.html">Cronômetro</a></li>
+              <li><a href="perfil.html">Meu Perfil</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+   <br>
+ <center>
+         <style>
+             
+             *{
+           margin: 0;
+           padding: 0;
+           box-sizing:border-box;
+           font-family: arial;
+       }
+       .studylogo{
+           width:90px;
+           height:60px;
+       }
+       .wrapper{
+           width:90%;
+           margin:  0 auto;
+       }
+       .container{
+           background: transparent;
+           float: right;
+        
+           height: 25px;
+           width:40px;
+           margin-top:-55px;
+           display:flex;
+           flex-direction:column;
+           justify-items: center;
+           cursor:pointer;
+       }
+       .menuLogo{
+           height:3px;
+           width:30px;
+           background:white;
+        
+
+     
+
+       }
+       .menu{
+           background-color: #338b85;
+           width:50%;
+           height:93vh;
+           padding:50px;
+           transform:translateX(-500px);
+           transition:0.5s;
+           position:fixed;
+           box-shadow: 0px 3px 10px #464646;
+       }
+       .menu li{
+            list-style: none;
+           list-style-type:none;
+           border-bottom: 1px solid #005954;
+           padding:20px 0;
+           text-align:center;
+           transition: font-weigth 0.2s;
+
+       }
+    
+       .menu li:last-child{
+           border-bottom:none;
+       }
+       .menu li:firts-child a{
+           font-weight:bold;
+       }
+      .menu li a{
+          color: snow;
+          text-decoration:none;
+          font-size:18px;
+      }
+      .menu li a:hover{
+           font-weight:bold;
+      }
+      .showmenu{
+          transform:translateX(0);
+      }
+header{
+    background-color: #5dc1b9;
+    box-shadow: 0px 3px 10px #464646;
+    width: 100%;
+    height: 60px;
+  }
+            .letra{
+       font-family: 'Marko One', serif;
+         font-size:30px;
+         color:#005954; 
+            }
+
+.perfil{
+    width:100px;
+    height:100px;
+}
+.baixo{
+     width:390px;
+    height:43px;
+}
+.letra2{
+         font-family: 'Inter', serif;
+         font-size:50px;
+         color:#005954; 
+}
+
+.dados{
+    font-family: 'Inter', serif;
+         font-size:20px;
+         color:#005954; 
+}
+
+.btnVoltar{
+           background-color:#1c5c59 ;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow:  0px 3px 10px #464646; 
+        color: white;
+        border: none;
+        outline: none;
+        width: 100px;
+        height: 30px;
+        transition: all 0.2s ease-in-out;
+     }
+
+     .btnSelecionarFoto{ background-color:#1c5c59 ;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow:  0px 3px 10px #464646; 
+        color: white;
+        border: none;
+        outline: none;
+        width: 100px;
+        height: 30px;
+        transition: all 0.2s ease-in-out;}
+     .btnVoltar:hover{
+          background-color: #464646;
+        color:#19e7dd;
+        transition: all 0.2s ease-in-out;
+
+    .barra{
+    background-color:#5dc1b9 ;
+    width: 100%;
+    height: 70px;
+    margin-top: 70px;
+     }
+     }
+
+
+         </style>
+
+
+         <script>
+            var logo = document.querySelector('.container');
+            var menu = document.querySelector('.menu');
+            logo.addEventListener('click',function(){
+                menu.classList.toggle('showmenu');
+            });
+           </script>
+<br>
+<br>
+<br>
+
+<center>
+    <h3 class="letra"> Usuário</h3>
+</center>
+
+<br>
+
+<center>
+   <img id="imagemSelecionada" style="display: none; max-width: 150px;">
+</center>
+
+<br>
+<center>
+   <button class="btnSelecionarFoto">Selecionar Foto</button>
+   <input type="file" id="fileInput" accept="image/*" style="display: none;">
+</center>
+
+<br> <br> <br> 
+
+<center>
+<h5 class="dados"> Nome: Eduarda</h5> 
+<h5 class="dados"> Perfil: Estudante</h5> 
+</center>
+
+<br> <br> <br> <br> <br> <br> <br>
+
+<center> <div class="buttons">
+       <a href="usuario.html"><button class="btnVoltar">Voltar</button></a>
+   </div></center>
+
+   <footer class="barra"></footer>
+
+
+      
+
+<script>
+    document.querySelector('.btnSelecionarFoto').addEventListener('click', function () {
+        document.getElementById('fileInput').click();
+    });
+
+    document.getElementById('fileInput').addEventListener('change', function (event) {
+        const imagemSelecionada = document.getElementById('imagemSelecionada');
+        const file = event.target.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                imagemSelecionada.src = e.target.result;
+                imagemSelecionada.style.display = 'block';
+            };
+
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
+
+
+</body>
+</html>

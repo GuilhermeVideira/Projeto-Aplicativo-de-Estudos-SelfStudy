@@ -1,0 +1,16 @@
+/* This is a CSS file */
+
+*{
+    margin:0;
+    padding: 0;
+}
+.mat{
+    width: 60px;
+    height: 60px;
+}
+fieldset{
+     width: 90px;
+    height: 80x;
+    border-color: #005954;
+    border-radius: 10px;
+}

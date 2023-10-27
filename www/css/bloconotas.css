@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Marko+One&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border box;
+    font-family: 'Inter', sans-serif;
+}
+
+.container1{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    margin-left: 10px;
+
+    }
+    .addNote-content1{
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100px;
+      border:1px dashed gray;
+      height: 150px;
+      cursor: pointer;
+    }
+    .icon-plus{
+       padding: 0 13px;
+  border: 1px solid;
+  width: fit-content;
+  border-radius: 50%;
+  font-size: xx-large;
+  margin: 20px;
+    }
+    .content0{
+        display: contents;
+    }
+    textarea{
+        padding: 8px;
+        padding-top: 14px;
+        outline: none;
+        resize: none;
+        border:none;
+        background-color: transparent;
+        font-size: 20px;
+        width: 90px;
+        height: 130px;
+
+    }
+    span{
+     text-align: center;
+    }
+  
+    .item{
+        
+        width: 130px;
+        height: 150px;
+        cursor:pointer;
+        color: white;
+    }
+    .remove{
+        
+        margin-left: 110px;
+        cursor: pointer;
+        color: white;
+    }
+    
+
+

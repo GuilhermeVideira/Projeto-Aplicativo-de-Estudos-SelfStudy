@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Marko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="components/loader.css">
+    <script src="components/loader.js"></script>
+     <script>
+        function verificarLogin() {
+            var username = document.getElementById("nameUser").value;
+            var senha = document.getElementById("usersenha").value;
+
+            var usuariosCadastrados = JSON.parse(localStorage.getItem("usuariosCadastrados"));
+
+            if (usuariosCadastrados) {
+                var usuarioCadastrado = usuariosCadastrados.find(function(user) {
+                    return user.nomeUsuario === username && user.senha === senha;
+                });
+
+                if (usuarioCadastrado) {
+                    window.location.href = 'telaprincipal.html';
+                } else {
+                    alert("Dados de login inválidos. Tente novamente.");
+                }
+            } else {
+               window.location.href = 'telaprincipal.html';
+            }
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <header class="barra1"></header>
+    </center>
+    <br><br><br><br><br><br>
+    <center>
+        <h1>Entrar</h1>
+    </center>
+    <br> <br>
+
+    <div class="form">
+        <form>
+            <label for="nameUser"><b>Usuário:</b></label><br>
+            <center>
+                <input type="text" class="name" id="nameUser" name="nameUser"></input><br>
+            </center>
+            <br>
+            <label for="usersenha"><b>Senha:</b></label><br>
+            <center>
+                <input type="password" class="senha" id="usersenha" name="usersenha"></input><br>
+            </center>
+        </form>
+    </div>
+
+    </div><br><br>
+    <center>
+        <div class="describe">
+            <p>Ainda não tem conta?<br><a href="cadastrar.html">Cadastra-se</a></p>
+        </div>
+    </center>
+    <br><br><br>
+    <center>
+        <div class="buttons">
+            <a href="index.html"><button class="btnVoltar">Voltar</button></a>
+            <button class="btnEntrar" onclick="verificarLogin()">Entrar</button>
+        </div>
+    </center>
+    <br><br>
+    <center>
+        <img class="logo" src="img/logoverde.png" alt="logo">
+    </center>
+    <footer class="barra"></footer>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        font-family: 'Inter', sans-serif;
+    }
+    .logo{
+        width:130px;
+        height:100px;
+    }
+    label{
+      
+     margin:110px;
+     color: #005954;
+    }
+    .name{
+      margin:0;
+      width:170px;
+      height:20px;
+      border-radius:8px;
+     border-color: #5dc1b9;
+     outline:none;
+     text-align:center;
+    }
+    .senha{
+      margin:0;
+      width:170px;
+      height:20px;
+      border-radius:8px;
+      border-color: #5dc1b9;
+      outline:none;
+      text-align:center;
+      
+    }
+    a{
+        color:#005954;
+    }
+     .barra1{
+         background-color:#5dc1b9 ;
+    width: 100%;
+    height: 50px;
+    margin-top: -60px; 
+    margin: 0px;
+     }
+     .barra{
+        background-color:#5dc1b9;
+         width:100%;
+         height:50px;
+         margin:0;
+         margin-top: 58px;
+     }
+     .btnEntrar{
+           background-color:#1c5c59 ;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow:  0px 3px 10px #464646; 
+        color: white;
+        border: none;
+        outline: none;
+        width: 100px;
+        height: 30px;
+        transition: all 0.2s ease-in-out;
+     }
+     .btnEntra:hover{
+          background-color: #464646;
+        color:#19e7dd;
+        transition: all 0.2s ease-in-out;
+     }
+     .btnVoltar{
+           background-color:#1c5c59 ;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow:  0px 3px 10px #464646; 
+        color: white;
+        border: none;
+        outline: none;
+        width: 100px;
+        height: 30px;
+        transition: all 0.2s ease-in-out;
+     }
+     .btnVoltar:hover{
+          background-color: #464646;
+        color:#19e7dd;
+        transition: all 0.2s ease-in-out;
+     }
+    
+     h1{
+         font-family: 'Marko One', serif;
+         font-size:20px;
+         color:#005954;
+     }
+     p{
+          font-family: 'Inter', serif;
+         color:black;
+         font-size:14px;
+
+     }
+     .logo{
+
+     }
+    </style>
+
+
+</head>
+<body>
+
+</body>
+</html>

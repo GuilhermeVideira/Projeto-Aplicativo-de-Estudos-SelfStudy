@@ -1,0 +1,150 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+      <link rel="stylesheet" href="css/style.css">
+     
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <!---início do código do Menu--->
+    <header>
+        <nav class="nav-bar">
+         <div class="logo">
+           <img class="studylogo" src="img/menu/logobranca.png">
+         </div>
+
+         <div class="wrapper">
+            <div class="container">
+                
+                <img class="icon" src="img/menu/menu.png">
+                <div class="menulogo"></div>
+                 <div class="menulogo"></div>
+                  <div class="menulogo"></div>
+            </div>
+        </div>
+        </nav>
+    </header>
+    
+   
+        <ul class="menu">
+         <li><a href="telaprincipal.html">Início</a></li>
+             <li><a href="humor.html">Humor</a></li>
+              <li><a href="calendario.html">Calendário</a></li>
+              <li><a href="chat.html">Chat</a></li>
+              <li><a href="blocoNotas.html">Anotações</a></li>
+              <li><a href="bateria.html">Bateria</a></li>
+              <li><a href="crono.html">Cronômetro</a></li>
+              <li><a href="perfil.html">Meu Perfil</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+        <!---fim do código do Menu--->
+        <br><br>
+    <script>
+        
+    </script>
+</head>
+<body>
+  <center>
+  <div class="title">
+    <h2>SelfStudy<h2>
+      <p>Sobre</p>
+      </div>
+      <div class="corujaIcon">
+        <img class="coruja" src="img/coruja/coruja1.png">
+      </div>
+      <div class="describe">
+       <p class="txt1">   Olá estudante, somos o SelfStudy, o seu aplicativo <br>de estudos! Aqui você pode escutar músicas rela-<br>-xantes ao mesmo tempo que cronometra o seu<br> tempo de estudos.Além disso,você pode<span id="pontos">...</span><span id="mais"> aces-<br>-sar à conteúdos de suas matérias para estudar.<br>Aqui você pode ouvir músicas relaxantes enquanto<br> estuda.  Além dessas opções também pode con-<br>-sultar sua bateria,utilizar chatbot para tirar suas <br>dúvidas, calêndário para se programar melhor,dizer<br> como  se sente escolhendo o humor do dia e <br>anotar o que não pode esquecer num bloco de<br> notas.Tudo isso só aqui!No SelfStudy</p></span> 
+      
+     <br>
+       <button class="btnLerMais" onclick="leiaMais()" id="btnlerMais">Ler Mais</button>  
+      </div>
+      <br>
+       <p class="subtitulo"><b>Equipe</b>
+       </p>     
+       <br><br>
+  </center>
+  <div class="equipe">
+     <div class="e1">
+      <div class="card">
+          <div class="image">
+              <img class="card1" src="img/equipe/duda1.jpeg" alt="user1"> 
+          </div>
+          <p class="txt0"><b>Eduarda Belles</b></p>
+          <p class="txt0">Programadora</p>
+      </div>
+     </div>
+      <center>
+      <div class="card">
+          <div class="image">
+              <img class="card2" src="img/equipe/fran1.jpeg" alt="user1"> 
+          </div>
+          <p class="txt2"><b>Franciele Aires</b></p>
+          <p class="txt2">Programadora</p>
+      </div>
+      </center>
+      <div class="g1">
+      <div class="card">
+          <div class="image">
+              <img class="card3" src="img/equipe/gui2.jpeg" alt="user1"> 
+          </div>
+          <p class="txt3"><b>Guilherme V.</b></p>
+          <p class="txt03">Programador</p>
+      </div>
+      </div>
+      <br><br>
+  <div class="i1">
+      <div class="card">
+          <div class="image">
+              <img class="card4" src="img/equipe/izab.jpeg" alt="user1"> 
+          </div>
+          <p class="txt4"><b>Izabella Ferreira</b></p>
+          <p class="txt04">Designer</p>
+      </div>
+  </div>
+      <center>
+       <div class="card">
+          <div class="image">
+              <img class="card5" src="img/equipe/manu1.jpeg" alt="user1"> 
+          </div>
+          <p class="txt5"><b>Manuela Schunck</b></p>
+          <p class="txt05">Designer</p>
+      </div>
+      </center>
+      <div class="t1">
+       <div class="card">
+          <div class="image">
+              <img class="card6" src="img/equipe/ttakas1.jpeg" alt="user1"> 
+          </div>
+          <p class="txt6"><b>Takeshi B.</b></p>
+          <p class="txt06">Designer & <p class="txt006">Programador</p>
+      </div>
+  </div>
+  </div>
+  <script>
+    function leiaMais(){
+      var pontos=document.getElementById("pontos");
+      var maisTxt=document.getElementById("mais");
+      var btnlerMais =document.getElementById("btnlerMais");
+
+      if(pontos.style.display==="none"){
+        pontos.style.display="inline";
+        maisTxt.style.display="none";
+        btnlerMais.innerHTML="Leia Mais";
+      }else{
+         pontos.style.display="none";
+        maisTxt.style.display="inline";
+        btnlerMais.innerHTML="Leia Menos";
+        
+      }
+    }
+  </script>
+</body>
+<br><br>
+  <footer class="barra"></footer>
+    <script src="js/menuScript.js"></script>
+</html>

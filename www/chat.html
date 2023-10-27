@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Marko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="components/loader.css">
+    <script src="components/loader.js"></script>
+   
+    <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/menu.css">
+    <script>
+        //
+        // TODO: Write JavaScript code here
+        //
+    </script>
+</head>
+<body>
+    <style>
+        /* CSS do menu*/
+  *{
+           margin: 0;
+           padding: 0;
+           box-sizing:border-box;
+           font-family: arial;
+       }
+       .studylogo{
+           width:90px;
+           height:60px;
+       }
+       .wrapper{
+           width:90%;
+           margin:  0 auto;
+           margin-top:-30px;
+       }
+       .barra{
+    background-color:#5dc1b9 ;
+    width: 100%;
+    height: 28px;
+    margin-top: 160px;
+     }
+ 
+    </style>
+  
+    <header>
+        <nav class="nav-bar">
+         <div class="logo">
+           <img class="studylogo" src="img/menu/logobranca.png">
+         </div>
+
+         <div class="wrapper">
+            <div class="container">
+                
+                <img class="icon" src="img/menu/menu.png">
+                <div class="menulogo"></div>
+                 <div class="menulogo"></div>
+                  <div class="menulogo"></div>
+            </div>
+        </div>
+        </nav>
+    </header>
+        
+   
+        <ul class="menu">
+        
+            <li><a href="telaprincipal.html">Início</a></li>
+             <li><a href="humor.html">Humor</a></li>
+              <li><a href="calendario.html">Calendário</a></li>
+              <li><a href="chat.html">Chat</a></li>
+              <li><a href="blocoNotas.html">Anotações</a></li>
+              <li><a href="bateria.html">Bateria</a></li>
+              <li><a href="crono.html">Cronômetro</a></li>
+              <li><a href="perfil.html">Meu Perfil</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+   <br><br><br>
+ <center>
+     
+       <center>
+  <div class="title">
+    <h2>SelfStudy<h2>
+      <p class="p1">Bloco de Notas</p>
+      </div><br><br>
+   <center>
+   <div id="chatContainer" class="chat-container"></div>
+    <input class="input" type="text" id="userInput" onkeyup="handleUserInput(event)" placeholder="Digite sua mensagem..."></center>
+<style>
+
+
+     .p1{
+        color:#5dc1b9;
+        font-size:17px;
+    }
+        .chat-container {
+            width: 300px;
+            height: 300px;
+            background-color: #f1f1f1;
+            overflow: auto;
+            padding: 10px;
+            margin-top: 15px;
+            margin-left: 0px;
+            border-radius: 15px ;
+        }
+
+        .user-message {
+            text-align: right;
+            color: #5DC1B9;
+        }
+
+        .bot-message {
+            text-align: left;
+            color: rgb(0, 0, 0);
+        }
+
+        .user-icon, .bot-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            margin-top: 10px
+        }
+        .input {
+            outline:none;
+            margin-top: 20px; 
+            margin-left: 0px;
+            padding: 10px 20px;
+             background-color: white; 
+             color: rgb(0, 0, 0);
+              border-radius: 5px; 
+              border-color: #5DC1B9;
+              border-style: 4px;
+              cursor: pointer;
+        }
+        
+</style>
+    <script>
+        const chatContainer = document.getElementById('chatContainer');
+        const userInput = document.getElementById('userInput');
+        let conversation = [];
+
+        function botResponse(userInput) {
+            if (userInput.toLowerCase().includes('estudar')) {
+                return 'Escolha uma matéria: Matemática, Geografia, Biologia.';
+            } else if (userInput.toLowerCase().includes('matemática')) {
+                return 'Você deve estudar Radiano, Tabuada e Divisão.';
+            } else if (userInput.toLowerCase().includes('geografia')) {
+                return 'Você deve estudar Continentes e Tipos de Relevo.';
+            } else if (userInput.toLowerCase().includes('biologia')) {
+                return 'Você deve estudar Botânica, Zoológica e Microbiologia.';
+            } else if (userInput.toLowerCase().includes('feliz')) {
+                return 'Que ótimo! Continue assim!';
+            } else if (userInput.toLowerCase().includes('triste')) {
+                return 'Não se preocupe, dias melhores virão!';
+            } else if (userInput.toLowerCase().includes('bravo')) {
+                return 'Respire fundo, tudo vai ficar bem.';
+            } else if (userInput.toLowerCase().includes('entediado')) {
+              return 'Um bom banho quente irá resolver!.';
+            } else if (userInput.toLowerCase().includes('sentimentos')) {
+                return 'Como você está se sentindo hoje? Opções: Feliz, Triste, Bravo, Entediado, Sonolento, Neutro.';
+                return 'Que tal tentar algo novo para animar o seu dia?';
+            } else if (userInput.toLowerCase().includes('sonolento')) {
+                return 'Uma boa soneca pode fazer maravilhas!';
+            } else if (userInput.toLowerCase().includes('neutro')) {
+                return 'Às vezes é bom apenas relaxar e não se preocupar com nada.';
+            } else if (userInput.toLowerCase().includes('agendar')) {
+                window.location = "calendario.html";
+                return 'Redirecionando para o calendário...';
+            } else {
+                return 'Desculpe, não entendi. Poderia repetir de outra forma?';
+            }
+        }
+
+        function updateChat(message, isUser) {
+            const messageElement = document.createElement('div');
+            messageElement.classList.add(isUser ? 'user-message' : 'bot-message');
+            messageElement.innerText = message;
+            chatContainer.appendChild(messageElement);
+        }
+
+        function handleUserInput(event) {
+            if (event.key === 'Enter') {
+                const userInputValue = userInput.value;
+                updateChat(userInputValue, true);
+                conversation.push(userInputValue);
+                const botReply = botResponse(userInputValue);
+                updateChat(botReply, false);
+                conversation.push(botReply);
+                userInput.value = '';
+            }
+        }
+           function updateChat(message, isUser) {
+            const messageElement = document.createElement('div');
+            const iconElement = document.createElement('img');
+
+            messageElement.classList.add(isUser ? 'user-message' : 'bot-message');
+            messageElement.innerText = message;
+            iconElement.src = isUser ? 'img/chat/usuario.png' : 'img/chat/robo.png';
+            iconElement.classList.add(isUser ? 'user-icon' : 'bot-icon');
+
+            messageElement.prepend(iconElement);
+            chatContainer.appendChild(messageElement);
+        }
+
+        function handleUserInput(event) {
+            if (event.key === 'Enter') {
+                const userInputValue = userInput.value;
+                updateChat(userInputValue, true);
+                conversation.push(userInputValue);
+                const botReply = botResponse(userInputValue);
+                updateChat(botReply, false);
+                conversation.push(botReply);
+                userInput.value = '';
+            }
+        }
+
+        updateChat('Olá! Como posso ajudar você hoje? Opções: "Quero estudar", "Quero falar meus sentimentos", "Quero agendar um evento".', false);
+        function toggleNav() {
+            var navLinks = document.getElementById("navLinks");
+            if (navLinks.style.display === "block") {
+                navLinks.style.display = "none";
+            } else {
+                navLinks.style.display = "block";
+            }
+        }
+
+        function toggleLinks() {
+            var navLinks = document.getElementById("navLinks");
+            if (navLinks.style.display === "none") {
+                navLinks.style.display = "block";
+            } else {
+                navLinks.style.display = "none";
+            }
+        }
+    </script>
+    <br><br>
+   <footer class="barra"></footer>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        font-family: 'Inter', sans-serif;
+    }
+    .logo{
+        width:100px;
+        height:90px;
+    }
+     .barra1{
+         background-color:#5dc1b9 ;
+    width: 100%;
+    height: 50px;
+    margin-top: -60px; 
+    margin: 0px;
+     }
+     .barra{
+         background-color:#5dc1b9;
+         width:100%;
+         height:40px;
+         margin:0;
+         margin-top: 30px;
+     }
+     .btnEntrar{
+           background-color:#1c5c59 ;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow:  0px 3px 10px #464646; 
+        color: white;
+        border: none;
+        outline: none;
+        width: 100px;
+        height: 30px;
+        transition: all 0.2s ease-in-out;
+     }
+     .btnEntra:hover{
+          background-color: #464646;
+        color:#19e7dd;
+        transition: all 0.2s ease-in-out;
+     }
+     .btnCadastrar{
+           background-color:#1c5c59 ;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow:  0px 3px 10px #464646; 
+        color: white;
+        border: none;
+        outline: none;
+        width: 100px;
+        height: 30px;
+        transition: all 0.2s ease-in-out;
+     }
+     .btnCadastra:hover{
+          background-color: #464646;
+        color:#19e7dd;
+        transition: all 0.2s ease-in-out;
+     }
+     .coruja1{
+      width: 160px;
+      height: 160px;
+     }
+     h2{
+         font-family: 'Marko One', serif;
+         font-size:20px;
+         color:#005954;
+     }
+     p{
+          font-family: 'Inter', serif;
+         color:black;
+         font-size:14px;
+
+     }
+     .logo0{
+ width:90px;
+        height:90px;
+        margin-top:-50px;
+     }
+     @media (max-width:)
+    </style>
+     <script src="js/menuScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+.ImagemCorjua{
+  left:25px; position: absolute;
+}
+
+.ImagemPortugues2{
+     left:305px; position: absolute;
+}
+
+.botao01 {
+     left:50px; position: absolute;
+}
+
+.botao02 {
+     left:230px; position: absolute;
+}
+
+.botao03 {
+     left:140px; position: absolute;
+}
+
+.botao04 {
+     left:136px; position: absolute;
+}
+
+.Botao{
+    background-color: white;
+    color: #005954;
+    border: 2px solid #3ABAB0;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.Botao:hover {
+    background-color: #3ABAB0;
+    color: white;
+}
+
+.BotaoVoltar {
+    background-color: #3ABAB0;
+    color: white;
+    border: none;
+    padding: 15px 45px;
+    margin: 10px;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.BotaoVoltar:hover {
+    background-color: #3ABAB0;
+    transform: scale(1.03);
+}
+
+.barra{
+    background-color:#5dc1b9;
+    width:100.1%;
+    height:30px;
+    margin:0;
+    margin-top: 108px;
+}

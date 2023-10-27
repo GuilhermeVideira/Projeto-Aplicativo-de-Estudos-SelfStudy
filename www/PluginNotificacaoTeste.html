@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #notificar {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Plugin de Notificação</h1>
+
+    <button id="notificar">Notificar</button>
+
+    <script src="cordova.js"></script>
+    <script>
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        function onDeviceReady() {
+    
+            document.getElementById("notificar").addEventListener("click", function () {
+                if ("Notification" in window) {
+                    if (Notification.permission === "granted") {
+  
+                        var options = {
+                            body: "Acesse já o lembrete diário dos conteúdos atualizados! "
+                            icon: "imagens/Menu/logobranca.png"
+                        };
+
+                        var notification = new Notification("Conteúdos Atualizados.", options);
+                    } else if (Notification.permission !== "denied") {
+                        Notification.requestPermission().then(function (permission) {
+                            if (permission === "granted") {
+                                // Notifica o usuário após obter permissão
+                                var options = {
+                                    body: "Acesse já o lembrete diário dos conteúdos atualizados! ",
+                                    icon: "imagens/Menu/logobranca.png"
+                                };
+
+                                var notification = new Notification("Conteúdos Atualizados.", options);
+                            }
+                        });
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

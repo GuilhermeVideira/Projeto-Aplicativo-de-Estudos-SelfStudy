@@ -1,0 +1,473 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Marko+One&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+*{
+  
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Itim';
+   
+}
+ .title{
+          font-family: 'Marko One', serif;
+          color: #005954;
+          font-size: 22px;
+     }
+           
+          
+    .p1{
+        color:#5dc1b9;
+        font-size:17px;
+    }
+        .barra{
+    background-color:#5dc1b9 ;
+    width: 100%;
+    height: 40px;
+    margin-top: 15px;
+     }
+     .wrapper00{
+
+  width: 300px;
+
+  margin-top: 10%;
+
+  margin-left: 50px;
+
+  background: #fff;
+
+  border-radius: 10px;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+
+ 
+
+}
+
+.wrapper header{
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 25px 30px 10px;
+
+  justify-content: space-between;
+
+}
+
+header .icons{
+
+  display: flex;
+
+}
+
+header .icons span{
+
+  height: 38px;
+
+  width: 38px;
+
+  margin: 0 1px;
+
+  cursor: pointer;
+
+  color: white;
+
+  text-align: center;
+
+  line-height: 38px;
+
+  font-size: 1.9rem;
+
+  user-select: none;
+
+  border-radius: 50%;
+
+}
+
+.icons span:last-child{
+
+  margin-right: -10px;
+
+}
+
+header .icons span:hover{
+
+  background: #f2f2f2;
+
+}
+
+header .current-date{
+
+  font-size: 1.45rem;
+
+  font-weight: 500;
+
+}
+
+.calendar{
+
+  padding: 20px;
+
+}
+
+.calendar ul{
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  list-style: none;
+
+  text-align: center;
+
+}
+
+.calendar .days{
+
+  margin-bottom: 20px;
+
+}
+
+.calendar li{
+
+  color: #333;
+
+  width: calc(100% / 7);
+
+  font-size: 1.07rem;
+
+}
+
+.calendar .weeks li{
+
+  font-weight: 500;
+
+  cursor: default;
+
+}
+
+.calendar .days li{
+
+  z-index: 1;
+
+  cursor: pointer;
+
+  position: relative;
+
+  margin-top: 30px;
+
+}
+
+.days li.inactive{
+
+  color: #aaa;
+
+}
+
+.days li.active{
+
+  color: #fff;
+
+}
+
+.days li::before{
+
+  position: absolute;
+
+  content: "";
+
+  left: 50%;
+
+  top: 50%;
+
+  height: 40px;
+
+  width: 40px;
+
+  z-index: -1;
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+}
+
+.days li.active::before{
+
+  background: #5DC1B9;
+
+}
+
+.days li:not(.active):hover::before{
+
+  background: #f2f2f2;
+
+}
+
+.botao {
+
+     background-color: #5DC1B9;
+
+        border: 0;
+
+        color: white;
+
+        height: 40px;
+
+        width: 150px;
+
+        border-radius: 15px;
+
+        margin-top: 25px;
+
+        margin-left: 120px;
+
+        font-size: 20px;
+
+}
+
+.botao1 {
+
+     background-color: #fff;
+
+        border-style: 1px;
+
+        border-color: #5DC1B9;
+
+        color: #5DC1B9;
+
+        height: 40px;
+
+        width: 150px;
+
+        border-radius: 15px;
+
+        margin-top: 25px;
+
+        margin-left: 120px;
+
+        font-size: 20px;
+
+     
+
+}
+
+.texto {
+
+    margin-top: 140px;
+
+    margin-left: 80px;
+
+}
+
+.titulos {
+
+    display: flex;
+
+    justify-content: space-around;
+
+    margin-top: 25px;
+
+}
+.div {
+
+            background-color: #5DC1B9;
+
+            color: white;
+
+            position: absolute;
+
+            top: 15%;
+
+            left: 12%;
+
+            height: 45px;
+
+            width: 300px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+        }
+
+.title1 {
+
+   margin-top: 30px;
+
+   margin-left: 60px;
+
+    color: #005954;
+
+    font-family: 'Marko One', serif;
+
+}
+
+.title2 {
+
+   margin-top: 30px;
+
+   text-align: center;
+
+    color: #005954;
+
+    font-family: 'Marko One', serif;
+
+}
+
+.imagem3 {
+
+    height: 300px;
+
+    position: relative;
+
+    left: 10%;
+
+    top: 10px;
+
+}
+
+.botoes {
+
+    position: absolute;
+
+ 
+
+   
+
+}
+
+ .input-container {
+
+      margin: 30px 0;
+
+      text-align: center;
+
+    }
+
+ 
+
+    .input-container input, .input-container select {
+
+      margin: 10px;
+
+      padding: 10px;
+
+      border-radius: 5px;
+
+      border: 1px solid #ccc;
+
+    }
+
+ 
+
+    .botao4 {
+
+      background-color: #5DC1B9;
+
+      border: 0;
+
+      color: white;
+
+      height: 40px;
+
+      width: 150px;
+
+      border-radius: 15px;
+
+      margin-top: 10px;
+
+      font-size: 20px;
+
+    }
+
+ 
+
+    .botao-limpar {
+
+      background-color: #f2f2f2;
+
+      border: 0;
+
+      color: #333;
+
+      height: 40px;
+
+      width: 150px;
+
+      border-radius: 15px;
+
+      margin-top: 10px;
+
+      font-size: 20px;
+
+      transition: all .4s ease-in-out;
+
+    }
+
+    .botao-limpar:hover {
+
+        background-color: #5DC1B9 ;
+
+        color: white;
+
+    }
+
+    .input-group {
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+    }
+
+ 
+
+    .historico {
+
+      margin-top: 30px;
+
+      text-align: center;
+
+    }
+
+ 
+
+    .historico h2 {
+
+      color: #5DC1B9;
+
+      font-size: 24px;
+
+      margin-bottom: 10px;
+
+    }
+
+ 
+
+    #historico-list {
+
+      list-style: none;
+
+      padding: 0;
+
+    }
+
+ 
+
+    #historico-list li {
+
+      margin: 10px 0;
+
+      background: #f2f2f2;
+
+      padding: 15px;
+
+      border-radius: 5px;
+
+    }
+    
